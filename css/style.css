@@ -1,184 +1,110 @@
 body {
-    font-family: Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
+    background-color:  #eef0ea !important;
+    font-family: Verdana, sans-serif !important;
+}
+h1 {
+    font-weight: bold !important;
+    font-size: 2em !important;
+}
+h2 {
+    font-weight: bold !important;
+    align-items: center;
     text-align: center;
-    background-color:  #eef0ea;
+
 }
 header {
     background: url('../img/background.jpg') no-repeat center center/cover;
     color: white;
-    padding: 20px;
-    min-height: 20vh; /* Укажите желаемую высоту */
+    padding: 40px;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Центрирование контента */
+    justify-content: center;
     align-items: center;
+    text-align: center;
     font-size: 1.5em;
     text-shadow: 1px 1px 10px black;
+    min-height: 20vh;
 }
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
+.custom-block1 {
     background: #F9FBF5;
     border-radius: 3px;
     box-shadow: 0 0 2px rgba(29, 29, 58, 0.1);
 }
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 10px;
-    background: #28a745;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+.custom-block2 {
+    background: #F9FBF5;
+    border-radius: 3px;
+    box-shadow: 0 0 2px rgba(29, 29, 58, 0.1);
 }
-.btn:hover {
-    background: #218838;
+/* Адаптация */
+@media (max-width: 1024px) {
+    header {
+        font-size: 1.1em;
+        padding: 20px;
+    }
 }
-footer {
-    margin-top: 20px;
-    padding: 10px;
-    background: #333;
-    color: white;
+@media (min-width: 768px) and (max-width: 991px) {
+    .contacts {
+        margin: 0 !important;
 }
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
 }
-input, textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.custom-navbar {
+    position: fixed;
+    top: 0;
     width: 100%;
+    background: rgba(52, 76, 17, 0.7);
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1050; 
 }
-.page {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 20px;
-    flex-wrap: wrap; 
-    margin: 0px;
+
+.custom-navbar a {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    display: inline-block;
+    color: white;
+    margin: 0 15px;
+    font-size: 18px;
 }
-.main-content {
-    flex: 2; 
-    min-width: 300px;
+#about, #prices, #contacts {
+    scroll-margin-top: 40px; 
 }
- /* таблица */
-.prices-table {
+/* Таблица */
+.table.prices-table {
     border-radius: 8px;
     overflow: hidden;
-    text-align: left;
-    width: 100%;
-    margin: 40px 0;
     border-collapse: collapse;
     background-color: #f3f3f3;
     color: #7b7b7b;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
 }
-.prices-table th {
-    text-align: left;
+
+.table.prices-table th {
     background-color: #344C11;
     color: white;
-    font-weight: bold;
-    padding: 10px;
     border-right: 1px solid #dbdbdb;
+    line-height: 1.1;
+    font-weight: 700;
+    vertical-align: middle;
 }
-.prices-table td {
-    text-align: left;
-    padding: 10px;
+
+.table.prices-table td {
     border-bottom: 1px solid #dbdbdb;
     border-right: 1px solid #dbdbdb;
 }
-td span:first-child {
+
+.table.prices-table td span:first-child {
     color: #444444;
 }
 
-td span:not(:first-child) {
+.table.prices-table td span:not(:first-child) {
     color: #8e8e8e;
 }
-@media (min-width: 1025px) {
-    .navbar {
-        display: none;
-    }
-}
-/* Адаптация */
-@media (max-width: 1024px) {
-    .content-wrapper {
-      flex-direction: column;
-    }
-    .feedback-form {
-      width: 100%;
-    }
-    .page {
-        flex-direction: column;
-        gap: 0px;
-    }
-    #right-s {
-        order: -1;
-        max-width: 100%; 
-        padding: 15px 15px 0px 15px;
-    
-    }
-    .main-content {
-        padding: 0px;
-        margin: 15px;    
-    }
-    .container {
-        width: 100%;
-        padding: 15px;
-        box-sizing: border-box;
-    }
-    .container3, .container2, .container {
-        margin: 0 auto !important;
-    }
-    #about {
-        margin-bottom: 15px !important;
-    }
-    .navbar {
-        display: block; 
-        position: fixed;
-        top: 0;
-        width: 100%;
-        background: rgba(52, 76, 17, 0.7);
-        padding: 10px 0;
-        text-align: center;
-        z-index: 1000;
-    }
-    .navbar a {
-        text-decoration: underline;
-        text-underline-offset: 4px;
-        display: inline-block;
-        color: white;
-        margin: 0 15px;
-        font-size: 18px;
-    }
-    
-    header {
-        font-size: 1.1em;
-    }
-    h2 {
-        margin: 10px 0;
-    }
-}
-#about, #prices, #contacts {
-    scroll-margin-top: 40px; /* высота вашего навбара */
-}
-
-/* Левый блок */
-#right-s {
-    flex: 1;
-    max-width: 450px;
-}
-ul {
-    list-style: none;
+/* Правый блок */
+.check-list {
     padding-left: 0;
 }
 
-li {
+.check-list li {
     color: #444444;
     text-align: left;
     background: url("../icons/ок.svg") no-repeat left center;
@@ -186,139 +112,98 @@ li {
     padding-left: 28px;
     margin-bottom: 8px;
 }
-h3 { 
-    color: #444444;
-}
-h2 { 
-    color:#2C3A0B}
 
-.layout-wrapper {
-    display: flex;
-    justify-content: center;   /* Отступ между блоками */
-    align-items: center;              /* Центрирует по вертикали */
-    gap: 20px;                        /* Расстояние между блоками */
-    padding: 0px;                    /* Отступы от краёв */
-    box-sizing: border-box;           /* Чтобы padding учитывался в общей ширине */
-    height: 100%;                     /* Растягивает на всю высоту */
-    max-width: 1400px;                /* Максимальная ширина контейнера */
-    margin: 0 auto;
-}
-#about {
-    margin: 0 auto 20px auto; 
-    padding: 20px;
-    background: #F9FBF5;
-    border-radius: 3px;
-    box-shadow: 0 0 2px rgba(29, 29, 58, 0.1);
-}
-.container2 {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 0px;
-}
-/* Контакты */
-.container3 {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
+/* Контейнер контактов */
+.custom-block3 {
     background-color: #344c11;
-    color: white;
-    transition: all 0.3s;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    text-align: center;
+    line-height: 1;
 }
 .phone {
-    font-size: 1.5em;
+    font-size: 1.5rem !important;
+
 }
 .telegram-link {
     color: #ffffff;
     text-decoration: underline;
-  }
-  
+}
 .telegram-link:hover {
     color: #ff0000;
     text-decoration: none;
-  }
-  .contacts-h {
-    background-color: #344C11; 
-    color: white;              
-    text-align: center;        
-    margin: 0;                 
-    padding: 0px;             
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    font-size: 2em;
 }
-.sticky {
-    position: fixed;
-    top: 20px; /* Это значение можно адаптировать, если необходимо */
-    z-index: 9999;
-    margin: 0;
-    padding: 20px;
-    background-color: #344C11;
-    width: 375px; /* Примерно равный ширине элемента */
-    left: 20px; /* Позиция слева для соответствия */
+
+.contacts-h {
+    background-color: #344c11;
+    color: #ffffff;
+    font-size: 2em !important;
+
 }
 /* Кнопка */
-.btn-cta {
+.btn-wave {
     position: relative;
     display: inline-block;
     background-color: #D4A017;
-    color: #1c1c1c;
+    color: #1c1c1c !important;
     font-weight: bold;
-    padding: 18px 36px; 
-    font-size: 1.5em;
-    text-decoration: none;
-    border-radius: 6px;
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    border-radius: 0.5rem;
     z-index: 1;
+    text-decoration: none;
+    border: none;
     transition: background-color 0.3s ease;
-    overflow: visible; 
-    margin-top: 25px; /* Добавляем отступ сверху */
-    margin-bottom: 25px; /* Добавляем отступ снизу */
 }
 
-/* Анимация волн */
-.btn-cta::before,
-.btn-cta::after {
+.btn-wave:hover {
+    background-color: #c49515;
+}
+
+/* Волны */
+.btn-wave::before,
+.btn-wave::after,
+.btn-wave .wave-extra {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 6px;
-    background: rgba(255, 255, 255, 0.15);
-    z-index: 1; 
+    border-radius: inherit;
+    background: rgba(255, 255, 255, 0.2);
+    z-index: 0;
     animation: wave-rect 2.5s infinite;
 }
 
-.btn-cta::after {
+.btn-wave::after {
     animation-delay: 1.25s;
 }
 
-/* Анимация прямоугольной волны */
+.btn-wave .wave-extra {
+    animation-delay: 2s;
+}
+
 @keyframes wave-rect {
     0% {
         transform: scale(1);
         opacity: 0.5;
     }
     100% {
-        transform: scale(1.8); /* волна расширяется наружу */
+        transform: scale(1.2, 1.8);
         opacity: 0;
     }
 }
-.btn-cta .wave-extra {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 6px;
-    background: rgba(255, 255, 255, 0.15);
-    z-index: 1;
-    animation: wave-rect 2.5s infinite;
-    animation-delay: 2s;
+.sticky {
+    position: fixed;
+    top: 20px;
+    z-index: 9999;
+    background-color: #344C11;
+    width: 375px;
+    left: 20px;
 }
+/* Страница формы */
 
-/* *  Страница формы */ 
  html, body {
     margin: 0;
     padding: 0;
