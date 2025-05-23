@@ -2,14 +2,20 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
     <title>Ремонт компьютеров в Киеве</title>
+    <link rel="icon" href="icons/favicon.ico" sizes="16x16">
+    <link rel="icon" href="icons/favicon.ico" sizes="32x32">
+    <link rel="icon" type="image/svg+xml" href="icons/favicon.svg">
+    <link rel="icon" href="icons/android-chrome-192x192.png" sizes="192x192" type="image/png">
+    <link rel="icon" href="icons/android-chrome-512x512.png" sizes="512x512" type="image/png">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 </head>
 
 <body>
-    <div class="navbar">
+    <div class="custom-navbar navbar d-block d-md-none">
         <a href="#about">О нас</a>
         <a href="#prices">Цены</a>
         <a href="#contacts">Контакты</a>
@@ -19,13 +25,12 @@
         <h1>Ремонт компьютеров в Киеве</h1>
         <p>Быстро и качественно!</p>
     </header>
-    <div class="layout-wrapper">
-    <div class="page">
-    <div class="main-content">
-            
-    <div id="prices" class="container">
-         <h2>Цены и услуги</h2>
-        <table class="prices-table">
+    <div class="container my-4 custom-box">
+    <div class="row justify-content-center">
+    <div class="col-lg-8 col-md-12 mb-4 order-2 order-lg-1">
+        <div id="prices" class="custom-block1 p-3">   
+    <h2 class="mb-4 text-center custom-h2">Цены и услуги</h2>
+        <table class="table table-bordered prices-table">
             <tr>
                 <th>Ремонт компьютеров. Аппаратная часть</th>
                 <th>Стоимость (от)</th>
@@ -37,7 +42,7 @@
             <tr>
                 <td>
                     <span>Диагностика аппаратной части компьютера</span><br>
-                    В случае отказа от дальнейшей работы, диагностика оплачивается в размере 200 грн</td>
+                    <span>В случае отказа от дальнейшей работы, диагностика оплачивается в размере 200 грн</span></td>
                 <td>бесплатно</td>
             </tr>
             <tr>
@@ -69,20 +74,23 @@
                 <td>250 гривен</td>
             </tr>
             <tr>
-                <td><span>Чистка компьютера от пыли (+ замена термопасты, термопрокладок)</span><br>В стоимость данной услуги включена стоимость термопасты</td>
+                <td><span>Чистка компьютера от пыли (+ замена термопасты, термопрокладок)</span><br> 
+                    <span>В стоимость данной услуги включена стоимость термопасты</span></td>
                 <td>400 гривен</td>
             </tr>
             <tr>
-                <td><span>Чистка от пыли периферийных устройств (клавиатура, принтер…)<br></span>Чистка любых видов загрязненности. Цена зависит от уровня загрязненности и сложности разборки устройства</td>
+                <td><span>Чистка от пыли периферийных устройств (клавиатура, принтер…)</span><br> 
+                    <span>Чистка любых видов загрязненности. Цена зависит от уровня загрязненности и сложности разборки устройства</span></td>
                 <td>250 гривен</td>
             </tr>
             <tr>
-                <td><span>Ремонт комплектующих компьютера (материнская плата, блок питания…)<br></span>Данная услуга доступна только в нашей мастерской</td>
+                <td><span>Ремонт комплектующих компьютера (материнская плата, блок питания…)</span><br> 
+                    <span>Данная услуга доступна только в нашей мастерской</span></td>
                 <td>400 гривен</td>
             </tr>
         </table>
 
-        <table class="prices-table">
+        <table class="table table-bordered prices-table">
             <tr>
                 <th>Ремонт ноутбуков. Аппаратная часть</th>
                 <th>Стоимость (от)</th>
@@ -93,7 +101,8 @@
             </tr>
             <tr>
                 <td>
-                    <span>Диагностика аппаратной части ноутбука</span><br>В случае отказа от дальнейшей работы, диагностика оплачивается в размере 200 грн</td>
+                    <span>Диагностика аппаратной части ноутбука</span><br>
+                    <span>В случае отказа от дальнейшей работы, диагностика оплачивается в размере 200 грн</span></td>
                 <td>бесплатно</td>
             </tr>
             <tr>
@@ -154,7 +163,7 @@
             </tr>
         </table>
 
-        <table class="prices-table">
+        <table class="table table-bordered prices-table">
             <tr>
                 <th>Программное обеспечение</th>
                 <th>Стоимость (от)</th>
@@ -164,15 +173,15 @@
                 <td>бесплатно</td>
             </tr>
             <tr>
-                <td><span>Диагностика аппаратной части компьютера</span><br>В случае отказа от дальнейшей работы, диагностика оплачивается в размере 200 грн</td>
+                <td><span>Диагностика аппаратной части компьютера</span><br><span>В случае отказа от дальнейшей работы, диагностика оплачивается в размере 200 грн</span></td>
                 <td>бесплатно</td>
             </tr>
             <tr>
-                <td><span>Пакет Базовый — Установка Windows XP, 7, 8, 8.1,10 + драйвера</span><br>Установка Windows и необходимых драйверов. Сохранение необходимой информации (до 5 ГБ бесплатно)</td>
+                <td><span>Пакет Базовый — Установка Windows XP, 7, 8, 8.1,10 + драйвера</span><br><span>Установка Windows и необходимых драйверов. Сохранение необходимой информации (до 5 ГБ бесплатно)</span></td>
                 <td>400 гривен</td>
             </tr>
             <tr>
-                <td><span>Пакет Оптимальный — Установка Windows XP, 7, 8, 8.1,10 + драйвера + программное обеспечение</span><br>Установка необходимых драйверов, установка Программного Обеспечения для полноценного пользования компьютером, полная настройка, оптимизация Windows, сохранение необходимой информации (до 5 ГБ бесплатно)</td>
+                <td><span>Пакет Оптимальный — Установка Windows XP, 7, 8, 8.1,10 + драйвера + программное обеспечение</span><br><span>Установка необходимых драйверов, установка Программного Обеспечения для полноценного пользования компьютером, полная настройка, оптимизация Windows, сохранение необходимой информации (до 5 ГБ бесплатно)</span></td>
                 <td>500 гривен</td>
             </tr>
             <tr>
@@ -188,15 +197,16 @@
                 <td>200 гривен</td>
             </tr>
         </table>
-        
-       
-        </div> <!-- таблицы -->
+        </div> 
+        </div>
  
-    </div>   <!-- main content -->
-    <div id="right-s" class="container2">
-    <div id="about">
-        <h2>Наши преимущества</h2>
-        <ul>
+       
+    <div class="col-lg-4 col-md-12 order-1 order-lg-2">
+        <div class="row">
+            <div class="col-md-6 col-lg-12 col-12">
+        <div id="about" class="about custom-block2 p-3">
+        <h2 class="mb-4 text-center fw-bold custom-h2">Наши преимущества</h2>
+        <ul class="check-list list-unstyled">
             <li>Мастера с опытом работы от 3 лет</li>
             <li>Обоснованные и честные цены</li>
             <li>Приезд мастера от 25 минут</li>
@@ -208,38 +218,45 @@
             <li>Бесплатный ремонт на дому по гарантии</li>
         </ul>
     </div>
-    <div id="contacts" class="container3">
-        <h2 class="contacts-h">Контакты</h2> 
+</div>
+<div class="col-md-6 col-lg-12 col-12">
+    <div id="contacts" class="custom-block3 p-3 my-3 ">
+        <h2 class="contacts-h mb-4">Контакты</h2> 
         <div class="contacts">
-            <div>
+            <div class="mb-4">
             <p><strong>Выезд мастера на дом</strong></p>
             <p>Бесплатно по Киеву</p>
             <p>Ежедневно, с 08:30 до 21:00</p>
             </div>
-            <div class="phone">
+            <div class="phone mb-3">
             <p><strong>Телефон</strong></p>
-            <p>+38 (012) 123 12 12</p>
-            <p>+38 (013) 333 22 12</p>
+            <p><a href="tel:+380934356699" class="text-white">+38 (093) 435 06 99</a></p>
+            <p><a href="tel:+380981517753" class="text-white">+38 (098) 151 57 53</a></p>
             <p>
-                <a href="https://t.me/Pilipchuk_NLP" class="telegram-link">
+                <a href="https://t.me/motodenis7788" class="d-inline-flex align-items-center telegram-link">
                   <img src="icons/telegram-icon.svg" alt="Telegram" width="20" style="vertical-align: middle; margin-right: 5px;">
                   <strong>Наш Телеграмм</strong>
                 </a>
-              </p>                    </div>
-              <div class="button-wrapper">
-                <a href="form-page.html" class="btn-cta">Оставить заявку
+                </p>                    
+            </div>
+              <div class="text-center button-wrapper">
+                <a href="form-page.html" class="btn btn-primary my-4 mx-0 btn-wave">Оставить заявку
                     <span class="wave wave-extra"></span>
                 </a>
             </div>
         </div>
+        </div>
     </div>
-</div><!-- right-s -->
-</div><!-- "layout-wrapper" -->
-</div> <!-- page -->
+</div>
+</div>
+</div>
+</div>
+ 
     
     <footer>
         <p>&copy; 2025 Ремонт компьютеров в Киеве | Все права защищены</p>
     </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/sticky.js"></script>
 </body>
 </html>
