@@ -319,11 +319,34 @@ h2 {
 }
 
 /* *  Страница формы */ 
+ html, body {
+    margin: 0;
+    padding: 0;
+}
+.header-form {
+    background: url('../img/background2.jpg') no-repeat center center;
+    background-size: cover;
+    width: 100vw;             
+    min-height: 20vh;        
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;   
+}
+@media (max-width: 1024px) {
+  .header-form {
+    background-image: url('../img/background3.jpg');
+    min-height: 22vh;
+    background-size: cover;
+    background-position: center;
+  }
+}
 #form-page {
     background-color: #f4f4f4;
     padding: 20px;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 40px auto 0;
     border-radius: 10px;
 }
 
@@ -342,6 +365,8 @@ h2 {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    width: 100%;  
+    box-sizing: border-box;
 }
 
 #form-page button:hover {
@@ -349,13 +374,13 @@ h2 {
 }
 
 .required {
-    color: red; /* Красный цвет для звездочки */
+    color: red;
     font-weight: bold;
-    margin-right: 10px; /* Отступ между звездочкой и полем */
+    margin-right: 10px;
 }
 
 .form-group {
-    display: flex; /* Используем flexbox для выравнивания */
-    align-items: center; /* Центрируем по вертикали */
-    margin-bottom: 10px; /* Отступ между элементами формы */
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
 }
